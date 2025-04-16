@@ -4,7 +4,7 @@ This repository contains C programs developed as part of the **Data Structures w
 
 ## Table of Contents
 
-- [Program 1: Infix to Postfix Conversion](#program-1-infix-to-postfix-conversion)
+- [Program 1: Infix to Postfix Conversion](https://github.com/Anirudhabg/Data_Structure_Lab/tree/3fca0375315d9dcd76d999119b059fe1974c03df/Program1)
 - [Program 2: Postfix Expression Evaluation](#program-2-postfix-expression-evaluation)
 - [Program 3: Queue using Array](#program-3-queue-using-array)
 - [Program 4: Singly Linked List Operations](#program-4-singly-linked-list-operations)
