@@ -5,14 +5,14 @@ This repository contains C programs developed as part of the **Data Structures w
 ## Table of Contents
 
 - [Program 1: Infix to Postfix Conversion](https://github.com/Anirudhabg/Data_Structure_Lab/tree/3fca0375315d9dcd76d999119b059fe1974c03df/Program1)
-- [Program 2: Postfix Expression Evaluation](#program-2-postfix-expression-evaluation)
-- [Program 3: Queue using Array](#program-3-queue-using-array)
-- [Program 4: Singly Linked List Operations](#program-4-singly-linked-list-operations)
-- [Program 5: Searching Techniques](#program-5-searching-techniques)
-- [Program 6: Sorting Algorithms](#program-6-sorting-algorithms)
-- [Program 7: Kruskal's Algorithm](#program-7-kruskals-algorithm)
-- [Program 8: Dijkstra's Algorithm](#program-8-dijkstras-algorithm)
-- [Program 9: Polynomial Addition using Circular Representation](#program-9-polynomial-addition-using-circular-representation)
+- [Program 2: Postfix Expression Evaluation](https://github.com/Anirudhabg/Data_Structure_Lab/tree/3fca0375315d9dcd76d999119b059fe1974c03df/Program2)
+- [Program 3: Queue using Array](https://github.com/Anirudhabg/Data_Structure_Lab/tree/3fca0375315d9dcd76d999119b059fe1974c03df/Program3)
+- [Program 4: Singly Linked List Operations](https://github.com/Anirudhabg/Data_Structure_Lab/tree/3fca0375315d9dcd76d999119b059fe1974c03df/Program4)
+- [Program 5: Searching Techniques](https://github.com/Anirudhabg/Data_Structure_Lab/tree/3fca0375315d9dcd76d999119b059fe1974c03df/Program5)
+- [Program 6: Sorting Algorithms](https://github.com/Anirudhabg/Data_Structure_Lab/tree/3fca0375315d9dcd76d999119b059fe1974c03df/Program6)
+- [Program 7: Kruskal's Algorithm](https://github.com/Anirudhabg/Data_Structure_Lab/tree/3fca0375315d9dcd76d999119b059fe1974c03df/Program7)
+- [Program 8: Dijkstra's Algorithm](https://github.com/Anirudhabg/Data_Structure_Lab/tree/3fca0375315d9dcd76d999119b059fe1974c03df/Program8)
+- [Program 9: Polynomial Addition using Circular Representation](https://github.com/Anirudhabg/Data_Structure_Lab/tree/3fca0375315d9dcd76d999119b059fe1974c03df/Program9)
 
 ---
 
