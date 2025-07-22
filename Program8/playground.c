@@ -1,35 +1,35 @@
 // From a given vertex in a weighted connected graph, find shortest paths to other vertices Using Dijkstra's algorithm (C programming)
 
 #include <stdio.h>
-int COST[20][20], PATH[10], VERTICES[10], DISTANCE[10], n;
+int COST[20][20], PATH[10], Visited[10], DISTANCE[10], n;
 
 void dijikstrasAlgorithm(int SOURCE)
 {
     int count = 1, u, minimum;
     for (int i = 0; i < n; i++)
     {
-        VERTICES[i] = 0;
+        Visited[i] = 0;
         PATH[i] = SOURCE;
         DISTANCE[i] = COST[SOURCE][i];
     }
 
-    VERTICES[SOURCE] = 1;
+    Visited[SOURCE] = 1;
     while (count < n)
     {
         u = -1;
         minimum = 99;
         for (int i = 0; i < n; i++)
         {
-            if (VERTICES[i] == 0 && DISTANCE[i] < minimum)
+            if (Visited[i] == 0 && DISTANCE[i] < minimum)
             {
                 minimum = DISTANCE[i];
                 u = i;
             }
         }
-        VERTICES[u] = 1;
+        Visited[u] = 1;
         for (int i = 0; i < n; i++)
         {
-            if (VERTICES[i] == 0 && DISTANCE[u] + COST[u][i] < DISTANCE[i])
+            if (Visited[i] == 0 && DISTANCE[u] + COST[u][i] < DISTANCE[i])
             {
                 DISTANCE[i] = DISTANCE[u] + COST[u][i];
                 PATH[i] = u;
