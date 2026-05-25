@@ -27,76 +27,53 @@ void push(char x)
 char pop()
 {
     if (TOP == -1)
-    {
         return -1;
-    }
     return STACK[TOP--];
 }
 
 int priority(char x)
 {
     if (x == '(')
-    {
         return 0;
-    }
     if (x == '+' || x == '-')
-    {
         return 1;
-    }
     if (x == '*' || x == '/')
-    {
         return 2;
-    }
     if (x == '^')
-    {
         return 3;
-    }
     return 0;
 }
 
 void main()
 {
-    char EXPRESSION[100];
-
-    char *e, x;
+    char EXPRESSION[100], s, x;
+    int i = 0;
 
     printf("Enter the expression: \n");
-
     scanf("%s", EXPRESSION);
 
     printf("\n");
 
-    e = EXPRESSION;
-
-    while (*e != '\0')
+    while (EXPRESSION[i] != '\0')
     {
-        if (isalnum(*e))
-        {
-            printf("%c", *e);
-        }
-        else if (*e == '(')
-        {
-            push(*e);
-        }
-        else if (*e == ')')
+        s = EXPRESSION[i];
+        if (isalnum(s))
+            printf("%c", s);
+        else if (s == '(')
+            push(s);
+        else if (s == ')')
         {
             while ((x = pop()) != '(')
-            {
                 printf("%c", x);
-            }
         }
         else
         {
-            while (priority(STACK[TOP]) >= priority(*e))
-            {
+            while (priority(STACK[TOP]) >= priority(s))
                 printf("%c", pop());
-            }
-            push(*e);
+            push(s);
         }
-        e++;
+        i++;
     }
     while (TOP != -1)
-    {
         printf("%c", pop());
-    }
 }
