@@ -3,7 +3,7 @@ Assume that the postfix expression is read as a single line consisting of non-ne
 digit operands and binary arithmetic operators.
 The arithmetic operators are + (add), - (subtract), * (multiply) and / (divide). */
 
-// CASE 1: 
+// CASE 1:
 // Input: 623+-382/+*2-3+
 // Output: Result of the expression 623+-382/+*2-3+ is: 8.
 
@@ -22,37 +22,42 @@ int TOP = -1;
 
 void push(int x)
 {
-    if (TOP == MAX)
-    {
-        return;
-    }
     STACK[++TOP] = x;
 }
 
 int pop()
 {
     if (TOP == -1)
-    {
         return -1;
-    }
 
-    int x = STACK[TOP--];
+    return STACK[TOP--];
+}
 
-    return x;
+int getRes(int a, int b, char s)
+{
+    if(s == '+')
+        return a + b;
+    else if(s == '-')
+        return b - a;
+    else if(s == '*')
+        return a * b;
+    else if(s == '/')
+        return b / a;
 }
 
 void main()
 {
-    char *e, EXPRESSION[50];
+    char s, EXPRESSION[50];
+    int i = 0;
     printf("Enter the expression in postfix form only: \n");
     scanf("%s", EXPRESSION);
     int a, b, c, d;
-    e = EXPRESSION;
-    while (*e != '\0')
+    while (EXPRESSION[i] != '\0')
     {
-        if (isdigit(*e))
+        s = EXPRESSION[i];
+        if (isdigit(s))
         {
-            d = *e - 48;
+            d = s - 48;
             push(d);
         }
         else
@@ -60,24 +65,10 @@ void main()
             a = pop();
             b = pop();
 
-            switch (*e)
-            {
-            case '+':
-                c = a + b;
-                break;
-            case '-':
-                c = a - b;
-                break;
-            case '*':
-                c = a * b;
-                break;
-            case '/':
-                c = a / b;
-                break;
-            }
+            c = getRes(a, b, s);
             push(c);
         }
-        e++;
+        i++;
     }
     printf("Result of the expression %s is: %d.", EXPRESSION, pop());
 }
