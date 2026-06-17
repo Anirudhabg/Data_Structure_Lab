@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include <limits.h>
 
 int COST[10][10], v1, v2, n;
 
 void findMinimum()
 {
-    int minimum = INT_MAX;
+    int minimum = 999;
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
